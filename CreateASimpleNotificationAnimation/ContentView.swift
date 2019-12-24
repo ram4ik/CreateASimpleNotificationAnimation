@@ -25,8 +25,8 @@ struct ContentView: View {
                 Image(systemName: "bell.fill")
                     .font(.largeTitle)
                     .foregroundColor(Color(red: 0.995, green: 0.822, blue: 0.044))
-                    .animation(Animation.interpolatingSpring(stiffness: 200, damping: 10).repeatForever(autoreverses: false))
                     .rotationEffect(.degrees(notifyMe ? -15 : 45), anchor: .top)
+                    .animation(Animation.interpolatingSpring(stiffness: 200, damping: 10).repeatForever(autoreverses: false))
                     .onAppear() {
                         self.notifyMe.toggle()
                 }
